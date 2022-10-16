@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  tqidf_randomforest:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8000:8000

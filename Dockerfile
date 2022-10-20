@@ -16,6 +16,9 @@ RUN pip install seaborn
 RUN pip install textblob
 RUN pip install wordcloud
 RUN pip install sklearn
+RUN python -c "import nltk; nltk.download('wordnet')"
+RUN python -c "import nltk; nltk.download('punkt')"
+RUN python -c "import nltk; nltk.download('info_or_id='stopwords'')"
 
 #RUN pip install textattack
 #RUN pip install tensorflow_text
@@ -25,4 +28,4 @@ COPY ./app /app
 
 WORKDIR /app
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002"]

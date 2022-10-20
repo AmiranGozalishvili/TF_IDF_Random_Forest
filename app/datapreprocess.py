@@ -1,10 +1,6 @@
-import contractions
-import nltk
-
-nltk.download(info_or_id='stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
 import re
+
+import contractions
 
 
 def cont_expand(text):

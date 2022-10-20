@@ -178,3 +178,19 @@ def random_forest(X_train, X_test, y_train, y_test):
     plot_roc_curve(classifier, X_test, y_test)
 
     return y_pred, classifier
+
+import json
+
+def scores(y_test, y_pred):
+
+    Accuracy = "Accuracy:".ljust(18), round(accuracy_score(y_test, y_pred), 2)
+    Recall_Score = "Recall Score:".ljust(18), round(recall_score(y_test, y_pred), 2)
+    Percision_Score= "Percision Score:".ljust(18), round(precision_score(y_test, y_pred), 2)
+    F1_Score= "F1-Score:".ljust(18), round(f1_score(y_test, y_pred), 2)
+
+    scores = [Accuracy, Recall_Score, Percision_Score, F1_Score]
+
+
+    json_file = json.dumps(scores)
+
+    return json_file

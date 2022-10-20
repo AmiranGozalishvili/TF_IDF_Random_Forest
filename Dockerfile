@@ -18,7 +18,7 @@ RUN pip install wordcloud
 RUN pip install sklearn
 RUN python -c "import nltk; nltk.download('wordnet')"
 RUN python -c "import nltk; nltk.download('punkt')"
-RUN python -c "import nltk; nltk.download('info_or_id='stopwords'')"
+RUN python -c "import nltk; nltk.download('stopwords')"
 
 #RUN pip install textattack
 #RUN pip install tensorflow_text
